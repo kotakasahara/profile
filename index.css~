@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+/* index.css */
+
+/* overwrite default propaties
+---------------------------------------------------- */
+* {
+	margin: 0;
+	padding: 0;
+}
+img {	border: 0; }
+a {	border: 0; text-decoration: none; }
+a:link {	color: #4488aa; }
+a:visited {	color: #6699bb; }
+a:hover {	color: #aa8844; text-decoration: underline; }
+a:active {	color: #ffffff; }
+h1, h2, h3, h4, h5, h6, h7 {	clear: both; }
+
+/* list
+---------------------------------------------------- */
+ul {		margin: 0 0 16px; list-style: none; }
+ol {		margin: 0 0 16px 24px; }
+li {		margin: 0 0 24px; }
+dt, dd {	margin: 0 0 16px; display: inline; }
+
+/* float
+---------------------------------------------------- */
+.block {	display: block; }
+.clear {
+	clear: both;
+	height: 0;
+	_line-height: 0;	_font-size: 0;	/* for IE6 Quirks Mode */
+}
+.noclear {	clear: none; }
+
+/* font-size
+---------------------------------------------------- */
+.em07 {		font-size: 70%; }
+.em08 {		font-size: 80%; }
+.em09 {		font-size: 90%; }
+.em10 {		font-size: 100%; }
+.em11 {		font-size: 110%; }
+.em12 {		font-size: 120%; }
+.em13 {		font-size: 130%; }
+
+/* base
+---------------------------------------------------- */
+.my {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.author { }
+.title {	display: block; color: #c64; font-size: 110%; }
+.year { }
+.journal {	font-style: italic; }
+.issue {	color: #aaa; }
+
+a.pubmed, a.url, a.amazon {
+	padding: 0 6px;
+	border-radius: 4px;			/* CSS3 */
+	-webkit-border-radius: 4px;	/* for Safari,Google Chrome */
+	-moz-border-radius: 4px;	/* for Firefox */
+	color: #fff;
+	text-decoration: none;
+	font-weight: lighter;
+}
+a.pubmed {			background-color: #369; }
+a.pubmed:hover {	background-color: #58b; }
+a.url {				background-color: #396; }
+a.url:hover {				background-color: #5b8; }
+a.amazon {			background-color: #f8981d; }
+a.amazon:hover {	background-color: #ffb02f; }
+
+.position { }
+.boss {	color: #aaa; font-size: 90%; }
+.post { }
+
+:target { 	 background-color: #ffc; }
+
+/* basic elements
+---------------------------------------------------- */
+html {
+	height: 100%;
+}
+body {
+	margin: 0px;
+	width: 100%;
+	min-width: 880px;
+	height: 100%;
+	min-height: 400px;
+	background-color: #fff;
+	font-family:	Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	font-size: small;
+	line-height: 180%;
+	color: #444;
+	text-align: justify;
+	text-align: center;
+	background: #fff;
+	-webkit-text-size-adjust: 90%;	/* iPhone */
+}
+#wrapper {
+	position: relative;
+	margin: auto;
+	width: 800px;
+	border-left: 1px #8af dotted;
+	border-right: 1px #8af dotted;
+	color: #444;
+	background-color: #fff;
+	text-align: left;
+	z-index: 13000;
+	_text-align: center;	/* for IE6 Quirks Mode */
+}
+#wrapper * { _text-align: left;	/* for IE6 Quirks Mode */ }
+
+body > #wrapper { height: auto; }
+
+
+/* nest1: body elements
+---------------------------------------------------- */
+/* ------ header ------ */
+#header {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	height: 128px;
+	border-bottom: 1px #8af dotted;
+}
+
+#header img#photo {
+	display: block;
+	float: left;
+	margin: 4px;
+}
+
+#header #chlang {
+	display: block;
+	float: right;
+	margin: 4px 8px;
+	font-size: 90%;
+	color: #aaa;
+}
+#header #chlang #chlangjp ,#header #chlang #chlangen {
+	margin: 0;
+	padding: 2px 6px;
+	color: #8af;
+	text-decoration: none;
+	font-weight: lighter;
+	background-color: #fff;
+	border: 1px solid #8af;
+}
+#header #chlang #chlangjp {
+	border-top-left-radius: 4px;			/* CSS3 */
+	border-bottom-left-radius: 4px;			/* CSS3 */
+	-webkit-border-top-left-radius: 4px;	/* for Safari,Google Chrome */
+	-webkit-border-bottom-left-radius: 4px;	/* for Safari,Google Chrome */
+	-moz-border-radius-topleft: 4px;		/* for Firefox */
+	-moz-border-radius-bottomleft: 4px;		/* for Firefox */
+}
+#header #chlang #chlangen {
+	border-left: 0px;
+	border-top-right-radius: 4px;				/* CSS3 */
+	border-bottom-right-radius: 4px;			/* CSS3 */
+	-webkit-border-top-right-radius: 4px;		/* for Safari,Google Chrome */
+	-webkit-border-bottom-right-radius: 4px;	/* for Safari,Google Chrome */
+	-moz-border-radius-topright: 4px;			/* for Firefox */
+	-moz-border-radius-bottomright: 4px;		/* for Firefox */
+}
+#header #chlang a:hover {	background-color: #ffc !important; }
+#header #chlang span { color: #fff !important; background-color: #8af !important; }
+
+#header h1 {
+	margin: 0 auto;
+	padding: 32px 8px 0;
+	clear: none;
+	color: #68d;
+}
+
+#header h1 #lastupdate {
+	margin: 0 auto;
+	padding: 0 8px 8px;
+	color: #aaa;
+	font-size: 50%;
+	font-weight: normal;
+	text-decoration: none;
+}
+#header h1 #currentposition {
+	margin: 0 auto;
+	padding: 0 8px 8px;
+	color: #666;
+	font-size: 50%;
+	font-weight: normal;
+	text-decoration: none;
+}
+/* ------ pagebody ------ */
+#pagebody {
+	margin: 0 auto 0 auto;
+	padding: 0;
+	width: 800px;
+	min-height: 240px;
+	_width: 800px;	/* for IE6 Quirks Mode */
+}
+
+/* nest2: pagebody elements
+---------------------------------------------------- */
+#pagebody #navi {
+	float: left;
+	margin: 24px 0 0 12px;
+	padding: 0;
+	width: 160px;
+	font-size: 110%;
+}
+
+#pagebody #content {
+	float: right;
+	margin: 0 16px 0 0;
+	padding: 0;
+	width: 600px;
+}
+
+h2 {
+	margin: 24px 0 12px;
+	padding: 4px 8px;
+/*	color: #fff;
+	background-color: #68a; */
+	color: #68d;
+	border: 1px #68d dashed;
+}
+
+h3 {
+	margin: 12px 0 12px;
+	color: #8af;
+	border-bottom: 1px #8af dotted;
+	clear: both;
+}
+
+
+/* nest3: navi elements
+---------------------------------------------------- */
+#pagebody #navi li.nvt {
+	margin: 0 0 8px;
+	padding: 6px 0 0 0;
+	font-weight: bold;
+}
+
+#pagebody #navi ul {
+	margin: 0 0 24px 8px;
+}
+
+#pagebody #navi ul li {
+	margin: 0 0 8px;
+	padding: 3px 0 0 12px;
+	background: url(./images/li_tri.gif) no-repeat 0 10px;
+}
+
+#pagebody #navi a {
+	color: #8af;
+}
+
+/* nest3: content elements
+---------------------------------------------------- */
+dt {
+	display: block;
+	float: left;
+	clear: both;
+	margin: 0 20px 0 0;
+	text-align: right;
+}
+dd {
+	display: block;
+	float: left;
+}
+
+#cvdl dt {	width: 200px; }
+#cvdl dd {	width: 380px; }
+#contactinfodl dt {	width: 100px; margin-bottom: 8px; }
+#contactinfodl dd {	width: 480px; margin-bottom: 8px;}
+
+#societiesul li {
+	margin: 0 0 4px 24px;
+	list-style: square outside;
+}
+#softwareul li {
+	margin: 0 0 4px 24px;
+	list-style: square outside;
+}
